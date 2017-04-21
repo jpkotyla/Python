@@ -1,0 +1,52 @@
+Ensemble Learning Summary
+
+Many predictors - all of the same type making a final prediction by taking
+a weighted combination of all predictors in the ensemble.
+
+We want many accurate but uncorrelated predictors in order to develop an effective model.
+
+If the accuracy of individual predictors < 0.5 then the accuracy of the ensemble
+will deteriorate. If our individual models are more often correct then the
+ensemble should strengthen by making uncorrelated errors across predictions.
+
+Three reasons this is possible:
+
+1. Statistical. Learning algorithms can be thought of as searching through some
+ hypothesis space for the true model. If the space is sufficiently large, and
+ your data too small, you can run the risk of over-fitting.( i.e Hoeffdingers inequality).
+ Using multiple learners to produce search the hypothesis space in some local region,
+ and then averaging across the predictors will shrink the risk over-fitting.
+
+ 2. Computationally. Given that there is sufficient data, ensemble learning helps
+ to abait optimizations inefficiencies. For example, methods
+ that use gradient descent (neural nets, trees based algorithms) run the risk of
+ falling into local minimia. Optimal training for these situations is NP-Hard.
+ Ensembles will effectively start the optimization search at different points
+ within the parameter space.
+
+ 3. Representationally.
+
+
+
+Methods/Benefits/Drawbacks of ensemble learning:
+
+1. Bayesian Voting. This technique take a vote amongst a set of hypotheses within
+the hypothesis set H, weighting the hypothesis, h, by its posterior probability
+P(h|S) = P(h)*P(S|h). In complex problems H, cannot be eliminated, however
+there are methods of dealing with this issue. One such method draws hypotheses h_i
+from H accroding to P(h_i|S). Draw backs include selecting an optimal P(h) and H
+given our problem and all available information.
+
+2. Helpful for unstable learners. Trees, Nueral Networks, and rule learning
+algorithms are sensitive to inputs. By partitioning/drawing the set of training data
+we choose to feed each of the individual predictors in our ensemble, we can
+average away some of that data sensitivity. Random drawing of the data to feed to
+learners and then combining predictions is widely referred to as Bootstrap
+aggregation or bagging.
+
+A second method for subsetting data is partitioning. This procedure entails splitting
+a training set of data into k sets of equal size. We iterate through each of
+these sets fitting a model on all of the remaining (k-1) sets. We can average
+across all of the k models and report that as of hypothesis.
+
+TBC.

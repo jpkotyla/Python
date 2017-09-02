@@ -3,8 +3,10 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NgramComplexity" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/citibike" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finance" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/physics" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/physics" vcs="Git" />
   </component>
